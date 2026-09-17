@@ -1,57 +1,26 @@
-# 🤖 Gojek App Review Sentiment Analysis
+# Gojek App Review Sentiment Analysis
 
-<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.20-orange?style=for-the-badge&logo=tensorflow)
-![Scikit-Learn](https://img.shields.io/badge/ScikitLearn-1.6-green?style=for-the-badge&logo=scikit-learn)
-![Keras](https://img.shields.io/badge/Keras-3.13-red?style=for-the-badge&logo=keras)
-![Google Colab](https://img.shields.io/badge/Google%20Colab-Notebook-yellow?style=for-the-badge&logo=googlecolab)
-
-**Proyek Klasifikasi Sentimen Ulasan Aplikasi Gojek dari Google Play Store**
-*Dicoding — Belajar Pengembangan Machine Learning*
-
-</div>
-
----
-
-## 📋 Daftar Isi
-
-- [Situasi (Situation)](#-situasi-situation)
-- [Tugas (Task)](#-tugas-task)
-- [Pendekatan (Action)](#-pendekatan-action)
-- [Hasil (Result)](#-hasil-result)
-- [Struktur Proyek](#-struktur-proyek)
-- [Cara Penggunaan](#-cara-penggunaan)
-- [Dependensi](#-dependensi)
-
----
-
-## 🌍 Situasi *(Situation)*
 
 Gojek merupakan salah satu aplikasi super-app terbesar di Asia Tenggara dengan jutaan pengguna aktif setiap harinya. Setiap harinya, ribuan ulasan dari pengguna mengalir masuk ke Google Play Store, mengandung informasi berharga tentang kepuasan, keluhan, dan harapan pengguna terhadap layanan Gojek.
 
 Namun, **volume data yang sangat besar** membuat proses analisis manual menjadi tidak efisien dan tidak skalabel. Diperlukan sebuah sistem otomatis yang mampu:
-
 - Mengumpulkan ulasan secara otomatis
 - Mengklasifikasikan sentimen secara akurat
 - Menangani karakteristik khusus teks berbahasa Indonesia informal
 
-### Karakteristik Data yang Menantang
+### Karakteristik Data
 
 | Karakteristik | Deskripsi |
 |---|---|
-| 📝 *Short Text* | Rata-rata panjang ulasan hanya ~10 kata |
-| ⚖️ *Imbalanced Data* | Distribusi: Positif (59.7%) > Negatif (35.7%) > Netral (4.6%) |
-| 🗣️ Bahasa Informal | Banyak singkatan, typo, dan slang khas pengguna Indonesia |
+| *Short Text* | Rata-rata panjang ulasan hanya ~10 kata |
+| *Imbalanced Data* | Distribusi: Positif (59.7%) > Negatif (35.7%) > Netral (4.6%) |
+| Bahasa Informal | Banyak singkatan, typo, dan slang khas pengguna Indonesia |
 
 ---
 
-## 📌 Tugas *(Task)*
-
 Membangun sistem analisis sentimen end-to-end yang mampu:
-
-1. **Mengumpulkan data** ulasan Gojek dari Google Play Store secara otomatis
+1. **Mengumpulkan data** ulasan Gojek dari Google Play Store
 2. **Melakukan preprocessing** teks berbahasa Indonesia informal
 3. **Melatih dan membandingkan** beberapa model Machine Learning dan Deep Learning
 4. **Mengklasifikasikan sentimen** ulasan ke dalam 3 kelas:
@@ -61,7 +30,7 @@ Membangun sistem analisis sentimen end-to-end yang mampu:
 
 ---
 
-## 🛠️ Pendekatan *(Action)*
+## Pendekatan
 
 ### 1. Pengumpulan Data (`Scraping_Data.ipynb`)
 
@@ -147,33 +116,7 @@ Batch Size   : 32
 
 ---
 
-## 📊 Hasil *(Result)*
-
-### Performa Model LSTM (Model Terbaik)
-
-| Epoch | Train Accuracy | Val Accuracy |
-|---|---|---|
-| 1 | 96.56% | **97.29%** |
-| 2 | 97.73% | 96.25% |
-| 3 | 97.94% | 95.83% |
-| 5 | 98.78% | 95.31% |
-| 10 | 99.17% | 94.48% |
-
-> ✅ Model mencapai **val_accuracy tertinggi ~97.29%** pada epoch pertama, menunjukkan model yang kuat dalam mengklasifikasikan sentimen ulasan Gojek berbahasa Indonesia.
-
-### Alasan Pemilihan Metode
-
-| Faktor | Penjelasan |
-|---|---|
-| TF-IDF | Efektif untuk *short text classification* |
-| Logistic Regression | Kuat untuk *sparse features* hasil TF-IDF |
-| SMOTE | Mengatasi ketidakseimbangan kelas (*class imbalance*) |
-| PySastrawi | Stemming akurat untuk Bahasa Indonesia |
-| LSTM | Menangkap konteks sekuensial dalam teks |
-
----
-
-## 📁 Struktur Proyek
+## Struktur Proyek
 
 ```
 Proyek Analisis Sentimen/
@@ -186,7 +129,7 @@ Proyek Analisis Sentimen/
 
 ---
 
-## 🚀 Cara Penggunaan
+## Cara Penggunaan
 
 ### Prasyarat
 
@@ -285,7 +228,7 @@ print("Sentimen:", label[0])
 
 ---
 
-## 📦 Dependensi
+## Dependensi
 
 Install dependensi utama yang dibutuhkan:
 
@@ -312,22 +255,8 @@ pip install imbalanced-learn tensorflow keras
 
 ---
 
-## 📝 Catatan Penting
-
-> **Path Dataset**: Pastikan untuk menyesuaikan path file `gojek_reviews.csv` sesuai lokasi penyimpanan di Google Drive kamu pada cell pertama `Build_Model.ipynb`.
-
-> **Google Colab GPU**: Proyek ini dioptimalkan untuk Google Colab. Aktifkan GPU untuk pelatihan LSTM yang lebih cepat di **Runtime → Change runtime type → GPU**.
-
-> **Scraping Data Terbaru**: Untuk mendapatkan data ulasan terbaru, jalankan `Scraping_Data.ipynb` dan update path dataset di `Build_Model.ipynb`.
-
----
-
 ## 👤 Author
 
 **Dicoding — Proyek Akhir Belajar Pengembangan Machine Learning**
 
 ---
-
-<div align="center">
-  <i>Dibuat dengan ❤️ untuk keperluan pembelajaran Machine Learning</i>
-</div>
