@@ -20,13 +20,13 @@ Namun, **volume data yang sangat besar** membuat proses analisis manual menjadi 
 ---
 
 Membangun sistem analisis sentimen end-to-end yang mampu:
-1. **Mengumpulkan data** ulasan Gojek dari Google Play Store
-2. **Melakukan preprocessing** teks berbahasa Indonesia informal
-3. **Melatih dan membandingkan** beberapa model Machine Learning dan Deep Learning
-4. **Mengklasifikasikan sentimen** ulasan ke dalam 3 kelas:
-   - 🟢 **Positif** — Ulasan dengan rating 4–5 bintang
-   - 🟡 **Netral** — Ulasan dengan rating 3 bintang
-   - 🔴 **Negatif** — Ulasan dengan rating 1–2 bintang
+1. Mengumpulkan data ulasan Gojek dari Google Play Store
+2. Melakukan preprocessing teks berbahasa Indonesia informal
+3. Melatih dan membandingkan beberapa model Machine Learning dan Deep Learning
+4. Mengklasifikasikan sentimen ulasan ke dalam 3 kelas:
+   - 🟢 Positif — Ulasan dengan rating 4–5 bintang
+   - 🟡 Netral — Ulasan dengan rating 3 bintang
+   - 🔴 Negatif — Ulasan dengan rating 1–2 bintang
 
 ---
 
